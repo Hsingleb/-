@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/sopping/sopping",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#191919",
+    "selectedColor": "#559dd9",
+    "spacing": "8px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/homepage/home.png",
+        "selectedIconPath": "static/homepage/homeSelected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "static/homepage/listSelected.png",
+        "selectedIconPath": "static/homepage/list.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/sopping/sopping",
+        "iconPath": "static/homepage/sopping.png",
+        "selectedIconPath": "static/homepage/soppingSelected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/homepage/my.png",
+        "selectedIconPath": "static/homepage/mySelected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

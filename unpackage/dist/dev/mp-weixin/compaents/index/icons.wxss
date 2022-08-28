@@ -1,0 +1,23 @@
+
+.icons.data-v-52c958ec{
+	display: flex;
+	flex-wrap: wrap;
+	height: 300rpx;
+	width: 100%;
+}
+.icons_item.data-v-52c958ec{
+	height: 50%;
+	width: 23%;
+	overflow: hidden;
+	padding: 8rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.item_image.data-v-52c958ec{
+	height: 100%;
+	width: 100%;
+	border-radius: 40rpx;
+}
+

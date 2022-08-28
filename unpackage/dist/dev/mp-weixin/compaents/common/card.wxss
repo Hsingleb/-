@@ -1,0 +1,7 @@
+
+#card_name.data-v-ad259dbe{
+	display:flex;
+	justify-content: center;
+	padding: 20rpx;
+}
+

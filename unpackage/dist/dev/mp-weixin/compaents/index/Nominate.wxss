@@ -1,0 +1,13 @@
+
+.scroll_content.data-v-3eb20f3e{
+	width: 100%;
+	white-space: nowrap;
+}
+.scroll_item.data-v-3eb20f3e{
+	display: inline-block;
+}
+.shop_big.data-v-3eb20f3e{
+	height: 360rpx;
+	width: 100%;
+}
+

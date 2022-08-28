@@ -1,0 +1,26 @@
+
+#weixinHead{
+	margin-top: 10%;
+	text-align: center;
+}
+#HeadConst1{
+	float: left;
+}
+#HeadConst2{
+	float: right;
+}
+.catalogue_list{
+	height: 80rpx;
+	width:100%;
+	white-space: nowrap;
+}
+.catalogue_item{
+	padding: 16rpx;
+	display: inline-block;
+}
+.f-active-color{
+	font-size: 30rpx;
+	padding: 4rpx;
+	border-bottom: 6rpx solid #49BDFB;
+}
+

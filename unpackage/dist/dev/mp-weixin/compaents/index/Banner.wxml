@@ -1,0 +1,1 @@
+<view class="Banner"><image class="Banner_img" src="{{BannerImgUrl}}"></image></view>

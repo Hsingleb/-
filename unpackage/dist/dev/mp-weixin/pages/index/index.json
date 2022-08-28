@@ -1,0 +1,15 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "平喜喜",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "index-swiper": "/compaents/index/IndexSwiper",
+    "recommend": "/compaents/index/Recommend",
+    "card": "/compaents/common/card",
+    "commodity-list": "/compaents/common/CommodityList",
+    "banner": "/compaents/index/Banner",
+    "icons": "/compaents/index/icons",
+    "hot": "/compaents/index/Hot",
+    "nominate": "/compaents/index/Nominate"
+  }
+}

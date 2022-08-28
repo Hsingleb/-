@@ -1,0 +1,12 @@
+
+.images_swiper.data-v-394da63a{
+	height: 400rpx;
+	width: 100%;
+}
+swiper.data-v-394da63a{
+	height: 400rpx;
+	width: 100%;
+	border-radius:50rpx;
+	overflow:hidden;
+}
+
