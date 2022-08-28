@@ -301,7 +301,12 @@ var render = function() {
                 "v-uni-scroll-view",
                 {
                   style: _vm._$g("6-" + $31, "s"),
-                  attrs: { "scroll-y": "true", _i: "6-" + $31 }
+                  attrs: { "scroll-y": "true", _i: "6-" + $31 },
+                  on: {
+                    scrolltolower: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
                 },
                 [
                   _vm._$g("7-" + $31, "i")
@@ -362,7 +367,15 @@ var render = function() {
                       ]
                     : _c("uni-view", { attrs: { _i: "19-" + $31 } }, [
                         _vm._v("暂时未搭建好")
-                      ])
+                      ]),
+                  _c(
+                    "uni-view",
+                    {
+                      staticClass: _vm._$g("20-" + $31, "sc"),
+                      attrs: { _i: "20-" + $31 }
+                    },
+                    [_vm._v(_vm._$g("20-" + $31, "t0-0"))]
+                  )
                 ],
                 2
               )
@@ -2759,7 +2772,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../HBuilderX.3.5.3.20220729/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n#weixinHead{\r\n\tmargin-top: 10%;\r\n\ttext-align: center;\n}\n#HeadConst1{\r\n\tfloat: left;\n}\n#HeadConst2{\r\n\tfloat: right;\n}\n.catalogue_list{\r\n\theight: 80rpx;\r\n\twidth:100%;\r\n\twhite-space: nowrap;\n}\n.catalogue_item{\r\n\tpadding: 16rpx;\r\n\tdisplay: inline-block;\n}\n.f-active-color{\r\n\tfont-size: 30rpx;\r\n\tpadding: 4rpx;\r\n\tborder-bottom: 6rpx solid #49BDFB;\n}\r\n", ""]);
+exports.push([module.i, "\n#weixinHead{\r\n\tmargin-top: 10%;\r\n\ttext-align: center;\n}\n#HeadConst1{\r\n\tfloat: left;\n}\n#HeadConst2{\r\n\tfloat: right;\n}\n.catalogue_list{\r\n\theight: 80rpx;\r\n\twidth:100%;\r\n\twhite-space: nowrap;\n}\n.catalogue_item{\r\n\tpadding: 16rpx;\r\n\tdisplay: inline-block;\n}\n.f-active-color{\r\n\tfont-size: 30rpx;\r\n\tpadding: 4rpx;\r\n\tborder-bottom: 6rpx solid #49BDFB;\n}\n.load_text{\r\n\tborder-top: 2rpx solid #636263;\r\n\tline-height: 60rpx;\r\n\ttext-align: center;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

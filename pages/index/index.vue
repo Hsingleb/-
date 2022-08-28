@@ -27,7 +27,9 @@
 		:style="'height:'+clentHeight+'px;'">
 				
 				<swiper-item v-for="(item,index) in newCatalogue" :key="index">	
-					<scroll-view scroll-y="true" :style="'height:'+clentHeight+'px;'">	
+					<scroll-view scroll-y="true" 
+					:style="'height:'+clentHeight+'px;'"
+					@scrolltolower='loadMoreData(index)'>	
 					
 					<!-- 首页栏 -->
 					<block v-if="item.data.length>0">
@@ -64,7 +66,7 @@
 					
 
 					
-					
+					<view class="load_text">{{item.loadText}}</view>
 				</scroll-view>				
 				
 			</swiper-item>
@@ -136,12 +138,14 @@
 				for(let i=0;i<this.catalogue.length;i++){
 					let obj = {
 						data:[],
-						load:"firse"
+						load:"firse",
+						loadText:'快拉呀~快拉呀~'
 					}
 					//获取首次数据
 					if(i==0){
 						obj.data = res.data
 						obj.load ='last'
+						
 					}
 					arr.push(obj)
 				}
@@ -166,10 +170,15 @@
 				this.click_catalogue(e.detail.current)
 			},
 			//切换导航栏的时候get数据
-			addPlateData(index){
+			addPlateData(index,callback){
+				
 				let id = this.catalogue[index].id
+				
+				let page = Math.ceil(this.newCatalogue[index].data.length/3)+1;
+				console.log(page);
 				uni.request({
-					url:"http://192.168.1.2:3000/api/index_list/"+id+"/data/1",
+					url:"http://192.168.1.2:3000/api/index_list/"+id+"/data/"+page+"",
+					
 					success: (res) => {
 						if(res.statusCode!=200){
 							return
@@ -180,6 +189,10 @@
 						}
 					}
 				})
+				console.log(this.newCatalogue[index].data.length);
+				if(typeof callback =='function'){
+					callback()
+				}
 			},
 			//得到手机视口大小  兼容性
 			getClientHeght(){
@@ -191,6 +204,17 @@
 				}else{
 					return 22+res.statusBarHeight		//小程序刘海机要去除 状态栏 以及小程序导航栏
 				}
+			},
+			//上拉请求更多的数据
+			loadMoreData(index){
+				this.newCatalogue[index].loadText = "我在快马加鞭的找东西了。。。"
+				
+				this.addPlateData(1,
+					()=>{
+						this.newCatalogue[index].loadText = "我在快马加鞭的找东西了。。。"
+					}
+				)
+				
 			}
 		},
 		
@@ -237,5 +261,11 @@
 	font-size: 30rpx;
 	padding: 4rpx;
 	border-bottom: 6rpx solid #49BDFB;
+}
+
+.load_text{
+	border-top: 2rpx solid #636263;
+	line-height: 60rpx;
+	text-align: center;
 }
 </style>

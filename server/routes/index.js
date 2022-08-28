@@ -239,5 +239,79 @@ router.get('/api/index_list/3/data/1', function(req, res, next) {
   })
 }); 
 
+router.get('/api/index_list/2/data/2', function(req, res, next) {
+  res.json({
+	  code:0,
+	  data:[
+		  {
+		  	type:"commodityList",
+		  	data:[
+		  		{
+		  			id:1,
+		  			imgUrl:"../../static/img/index/T-shirt1.png",
+		  			name:"2022年韩系毛衣校园风格爆款",
+		  			newPrice:199,
+		  			oldPrice:299,
+		  			discount:"5.2"
+		  		},
+		  		{
+		  			id:2,
+		  			imgUrl:"../../static/img/index/trousers1.png",
+		  			name:"库存不多，爆款打折甩卖，错过等一年",
+		  			newPrice:299,
+		  			oldPrice:399,
+		  			discount:"5.1"
+		  		},
+		  		{
+		  			id:3,
+		  			imgUrl:"../../static/img/index/shoe1.png",
+		  			name:"2022年最火爆款跑鞋",
+		  			newPrice:199,
+		  			oldPrice:369,
+		  			discount:"8.0"
+		  		},
+		  	]
+		  }
+	  ]
+	  })
+}); 
+
+router.get('/api/index_list/2/data/3', function(req, res, next) {
+  res.json({
+	  code:0,
+	  data:[
+	  		  {
+	  		  	type:"commodityList",
+	  		  	data:[
+	  		  		{
+	  		  			id:1,
+	  		  			imgUrl:"../../static/img/index/T-shirt1.png",
+	  		  			name:"2022年韩系毛衣校园风格爆款",
+	  		  			newPrice:199,
+	  		  			oldPrice:299,
+	  		  			discount:"5.2"
+	  		  		},
+	  		  		{
+	  		  			id:2,
+	  		  			imgUrl:"../../static/img/index/trousers1.png",
+	  		  			name:"库存不多，爆款打折甩卖，错过等一年",
+	  		  			newPrice:299,
+	  		  			oldPrice:399,
+	  		  			discount:"5.1"
+	  		  		},
+	  		  		{
+	  		  			id:3,
+	  		  			imgUrl:"../../static/img/index/shoe1.png",
+	  		  			name:"2022年最火爆款跑鞋",
+	  		  			newPrice:199,
+	  		  			oldPrice:369,
+	  		  			discount:"8.0"
+	  		  		},
+	  		  	]
+	  		  }
+	  ]
+  })
+}); 
+
 
 module.exports = router;
