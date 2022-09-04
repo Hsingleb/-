@@ -1,0 +1,29 @@
+
+.shop_title.data-v-73dbd437{
+	display: flex;
+	justify-content: center;
+}
+.title_item.data-v-73dbd437{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	height: 80rpx;
+}
+.item_icon.data-v-73dbd437{
+	position: relative;
+	margin-left: 8rpx;
+}
+.iconfont.data-v-73dbd437{
+	position: absolute;
+	left: 0px;
+	width:10rpx;
+	height:8rpx;
+}
+.up.data-v-73dbd437{
+	top: -24rpx;
+}
+.down.data-v-73dbd437{
+	top: -8rpx;
+}
+

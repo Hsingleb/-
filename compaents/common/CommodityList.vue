@@ -15,7 +15,8 @@
 		},
 		data(){
 			return{
-				}
+			
+			}
 		},
 		components:{
 			Commodity

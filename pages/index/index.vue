@@ -90,6 +90,7 @@
 </template>
 
 <script>
+	import myhttp from "@/common/api/request.js"
 	import IndexSwiper from "@/compaents/index/IndexSwiper.vue"
 	import Recommend from "@/compaents/index/Recommend.vue"
 	import Card from "@/compaents/common/card.vue"
@@ -124,16 +125,25 @@
 		methods: {
 			//请求数据
 			getIndexData(){
-				uni.request({
-					url:"http://192.168.1.2:3000/api/index_list/1/data/1",
-					success:(res)=>{
-						let data = res.data.data
-						this.catalogue = data.topBar
-						this.newCatalogue = this.initData(data)
-					}
+				
+				
+				
+				myhttp.request({
+					url:"/index_list/1/data/1"
+				}).then((res)=>{
+					// console.log(res)
+					this.catalogue = res.topBar
+					this.newCatalogue = this.initData(res)
+					
+					
+				}).catch(()=>{
+					console.log("首次请求错误");
 				})
+				
+				
 			},
 			initData(res){
+								
 				let arr = []
 				for(let i=0;i<this.catalogue.length;i++){
 					let obj = {
@@ -175,21 +185,19 @@
 				let id = this.catalogue[index].id
 				
 				let page = Math.ceil(this.newCatalogue[index].data.length/3)+1;
-				console.log(page);
-				uni.request({
-					url:"http://192.168.1.2:3000/api/index_list/"+id+"/data/"+page+"",
+				// console.log(page);
+				
+				myhttp.request({
+					url:"/index_list/"+id+"/data/"+page+"",
+				}).then((res)=>{
+					this.newCatalogue[index].data = [...this.newCatalogue[index].data,...res]
 					
-					success: (res) => {
-						if(res.statusCode!=200){
-							return
-						}else{
-							let data = res.data.data
-							this.newCatalogue[index].data = [...this.newCatalogue[index].data,...data]
-
-						}
-					}
+				}).catch(()=>{
+					console.log("请求错误");
 				})
-				console.log(this.newCatalogue[index].data.length);
+				
+				
+				// console.log(this.newCatalogue[index].data.length);
 				if(typeof callback =='function'){
 					callback()
 				}
@@ -211,7 +219,7 @@
 				
 				this.addPlateData(1,
 					()=>{
-						this.newCatalogue[index].loadText = "我在快马加鞭的找东西了。。。"
+						this.newCatalogue[index].loadText = "快拉呀~快拉呀。。。"
 					}
 				)
 				
@@ -231,6 +239,14 @@
 				}
 			})
 			
+		},
+		onNavigationBarButtonTap(e){
+			if(e.index==0){
+
+				uni.navigateTo({
+					url:"../search/search"
+				})
+			}
 		}
 	}
 </script>

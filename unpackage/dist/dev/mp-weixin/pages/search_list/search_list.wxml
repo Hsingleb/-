@@ -1,0 +1,1 @@
+<view><shopping-list vue-id="0e368494-1" searchText="{{searchText}}" bind:__l="__l"></shopping-list></view>

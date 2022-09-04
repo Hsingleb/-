@@ -1,0 +1,17 @@
+
+.search_item{
+	padding: 20rpx;
+}
+.search_title{
+	display: flex;
+	justify-content:space-between;
+}
+.search_Name{
+	padding: 4rpx 20rpx;
+	display: inline-block;
+	border-radius: 25px;
+	background-color:#f1f3f9;
+	margin: 8rpx;
+	color: #cdcdcd;
+}
+

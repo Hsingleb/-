@@ -28,20 +28,22 @@
             "style" :                                                                                    
             {
 				"navigationStyle": "custom",
-                "navigationBarTitleText": "平喜喜",
                 "enablePullDownRefresh": false,
 				"navigationBarBackgroundColor":"#ffffff",
 				"app-plus": {
 					"titleNView": {
+						"searchInput":{
+							"align": "left",
+							"autoFocus":false,
+							"backgroundColor":"#f1f3f9",
+							"placeholder":"点我开始搜索",
+							"borderRadius":"20px",
+							"disabled":true
+						},
 						"buttons": [
 							{"float": "left",
 							"fontSrc": "./static/iconfont.ttf",
-							"text": "\ue800"},
-							{
-								"float": "right",
-								"fontSrc": "./static/iconfont.ttf",
-								"text": "\ue629"
-							}
+							"text": "\ue800"}
 						]
 					}
 				}
@@ -52,23 +54,9 @@
             "path" : "pages/sopping/sopping",
             "style" :                                                                                    
             {
-				"navigationStyle": "custom",
-                "navigationBarTitleText": "平喜喜",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor":"#ffffff",
 				"app-plus": {
-					"titleNView": {
-						"buttons": [
-							{"float": "left",
-							"fontSrc": "./static/iconfont.ttf",
-							"text": "\ue800"},
-							{
-								"float": "right",
-								"fontSrc": "./static/iconfont.ttf",
-								"text": "\ue629"
-							}
-						]
-					}
+					"titleNView": false,
+					"scrollIndicator": "none"
 				}
             }
             
@@ -81,6 +69,89 @@
                 "navigationBarTitleText": "平喜喜",
                 "enablePullDownRefresh": false,
 				"navigationBarBackgroundColor":"#ffffff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#ffffff",
+				"app-plus":{
+					"scrollIndicator": "none",
+					"titleNView": {
+						"searchInput":{
+							"align": "left",
+							"autoFocus":false,
+							"backgroundColor":"#f1f3f9",
+							"placeholder":"点我开始搜索",
+							"borderRadius":"20px"
+							
+						},
+						"buttons":[{
+							"background":"#ffffff",
+							"float":"right",
+							"text":"搜索",
+							"fontSize":"16px",
+							"width":"48px"
+						}]
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/search_list/search_list",                                                                                   
+            "style" :
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#ffffff",
+            	"app-plus":{
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"searchInput":{
+            				"align": "left",
+            				"autoFocus":false,
+            				"backgroundColor":"#f1f3f9",
+            				"placeholder":"点我开始搜索",
+            				"borderRadius":"20px"
+            				
+            			},
+            			"buttons":[{
+            				"background":"#ffffff",
+            				"float":"right",
+            				"text":"筛选",
+            				"fontSize":"16px",
+            				"width":"48px"
+            			}]
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/show_details/show_details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品详细",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [
+							{
+								"type": "menu"
+							},
+							{
+								"type": "share"
+							}
+						]
+					}
+				}
             }
             
         }

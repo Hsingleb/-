@@ -1,8 +1,9 @@
 <template>
-	<view class="commodity" :style="'flex-wrap:'+wrap+';'">		
+	<view class="commodity" :style="'flex-wrap:'+wrap+';'"  >		
 		
 		<view class="commodity_item" v-for="(item,index) in commodityData" 
-		:key='item.id' :style="'width:'+itemW+';'">
+		:key='item.id' :style="'width:'+itemW+';'"
+		@click="toShowDelatalis(item.id)">
 		
 			<image class="item_image" :style="'height:'+itemH+';'" :src="item.imgUrl"></image>
 			
@@ -43,6 +44,13 @@
 				type:String,
 				default:"20rpx"
 			}
+		},
+		methods:{
+			toShowDelatalis(id){
+				uni.navigateTo({
+					url:'../../pages/show_details/show_details?id='+id+''
+				})
+			}
 		}
 	}
 </script>
@@ -75,7 +83,6 @@
 	}
 	.oldPrice{
 		text-decoration:line-through;
-		
 		color: gray;
 	}
 	.discount{

@@ -23,4 +23,9 @@
 	padding: 4rpx;
 	border-bottom: 6rpx solid #49BDFB;
 }
+.load_text{
+	border-top: 2rpx solid #636263;
+	line-height: 60rpx;
+	text-align: center;
+}
 

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "line_div": "/compaents/common/Line",
+    "commodity-list": "/compaents/common/CommodityList"
+  }
+}

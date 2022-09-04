@@ -25,7 +25,6 @@
 }
 .oldPrice.data-v-1f66a36c{
 	text-decoration:line-through;
-	
 	color: gray;
 }
 .discount.data-v-1f66a36c{

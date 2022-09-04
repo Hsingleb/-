@@ -9183,6 +9183,69 @@ function normalizeComponent (
 }
 
 
+/***/ }),
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */
+/*!*************************************************************************!*\
+  !*** D:/APP/uniapp/shoppingv1.0.0/shoppingv1.0.0/common/api/request.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
+{
+  common: {
+    baseurl: "http://192.168.1.2:3000/api",
+    data: {},
+    header: _defineProperty({
+      "content_Type": "application/json" }, "content_Type",
+    "application/x-www-form-urlencoded"),
+
+    method: "GET",
+    dataType: "JSON" },
+
+  request: function request() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    uni.showLoading({
+      title: "加载中",
+      mask: true });
+
+    options.url = this.common.baseurl + options.url;
+    console.log(options.url);
+    options.data = options.data || this.common.data;
+    options.header = options.header || this.common.header;
+    options.method = options.method || this.common.method;
+    options.dataType = options.dataType || this.common.dataType;
+    // console.log(options);
+    return new Promise(function (res, rej) {
+      uni.request(_objectSpread(_objectSpread({},
+
+      options), {}, {
+        success: function success(result) {
+          setTimeout(function () {
+            uni.hideLoading();
+          }, 1000);
+
+          if (result.statusCode != 200) {
+            // console.log(rej())
+            return rej();
+          } else {
+            var data = JSON.parse(result.data).data;
+            console.log(data);
+            res(data);
+          }
+
+        } }));
+
+    });
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
 /***/ })
 ]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
